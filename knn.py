@@ -29,7 +29,7 @@ def knn(testPoint, trainingData, k):  # algorithm for one point
     for element in map:
         if map[element] == predictedFrequency and element != predicted:
             tie.append(element)
-    if tie.__len__() > 1: # tie occurred, get first appearance in file
+    if tie.__len__() > 1:  # tie occurred, get first appearance in file
         for anInstance in trainingData:
             if anInstance.labeledClass in tie:
                 predicted = anInstance.labeledClass
@@ -80,5 +80,6 @@ def output():
         print "Correct classes: ", correct
         print "Accuracy: ", float(correct) / float(total)
         print "-------------------------"
+
 
 output()
